@@ -19,15 +19,21 @@ public class ProgramExample {
         System.out.println("圆柱体的体积是：" +pai *(r*r)*h);
         * }
      */
+
     /*
     *3,根据天数计算周数和剩余天数，天数通过键盘输入
-    *   Scanner sc = new Scanner(System.in);
-        System.out.print("请输入天数d=");
-        int d = sc.nextInt();
-        int z = d/7;
-        int t = d%7;
-        System.out.print("周数为："+ z + ",天数为：" + t);
      */
+         @Test
+         public void testFn3(){
+         Scanner sc = new Scanner(System.in);
+         System.out.print("请输入天数d=");
+         int d = sc.nextInt();
+         int z = d/7;
+         int t = d%7;
+         System.out.print("周数为："+ z + ",天数为：" + t);
+     }
+
+
     public static void main(String[] args) {
    Scanner sc = new Scanner(System.in);
         System.out.println("请输入第一个数：");
@@ -76,97 +82,255 @@ public class ProgramExample {
         } else {
             System.out.println(a * b);
         }*/
-        /*
+        /**
         输入一个字符，判断是大写还是小写，输出提示信息
-              char  a = 'G';
-        if(a>='a' && a<='z'){
-            System.out.println("小写字母");
-        }else if(a>='A'&&a<='Z'){
-            System.out.println("大写字母");
-        }else{
-            System.out.println("其他字符");
+        */
+        @Test
+        public void testFn6(){
+            char  a = 'G';
+            if(a>='a' && a<='z'){
+                System.out.println("小写字母");
+            }else if(a>='A'&&a<='Z'){
+                System.out.println("大写字母");
+            }else{
+                System.out.println("其他字符");
+            }
         }
-         */
-    @Test
-        public void testFn() {
-        final int a = 1;//final修饰不可变量
-    switch (a){
-        case a:
-            System.out.println(1);
-            break;
-        case 2:
-                System.out.println(2);
-            break;
-        case 4:
-            System.out.println(3);
-            break;
-        default:
-            System.out.println("default");
-            break;
-    }
-    }
-    /**
-     * 输入一个月数，然后输入对应月份有多少天（不考虑闰年），将天数输出。
-     */
-    @Test
-    public void testFn8(){
-        int d = 1;
-        switch(d){
-            case 1:
-            case 3:
-            case 5:
-            case 7:
-            case 8:
-            case 10:
-            case 12:
-                System.out.println("31天");
+
+
+        @Test
+            public void testFn7() {
+            final int a = 1;//final修饰不可变量
+        switch (a){
+            case a:
+                System.out.println(1);
                 break;
             case 2:
-                System.out.println("28天");
-            break;
+                    System.out.println(2);
+                break;
+            case 4:
+                System.out.println(3);
+                break;
             default:
-                System.out.println("30天");
-        }
-        int a = 10, b = 12;
-        String ysf = "+";
-        switch(ysf){
-            case"+":
-                System.out.println(a+b);
+                System.out.println("default");
                 break;
         }
-    }
+        }
+        /**
+         * 输入一个月数，然后输入对应月份有多少天（不考虑闰年），将天数输出。
+         */
+        @Test
+        public void testFn8(){
+            int d = 1;
+            switch(d){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    System.out.println("31天");
+                    break;
+                case 2:
+                    System.out.println("28天");
+                break;
+                default:
+                    System.out.println("30天");
+            }
+            int a = 10, b = 12;
+            String ysf = "+";
+            switch(ysf){
+                case"+":
+                    System.out.println(a+b);
+                    break;
+            }
+        }
+        /**
+         * while循环
+         */
+        @Test
+        public void testFn9(){
+        int i = 10;
+        while(i-->4){
+            System.out.println(i);
+        }
+        }
+        /**
+         * 计算1-100之间所有整数的和。。5050
+         */
+        @Test
+        public void testFn10(){
+            int i = 1;
+            int sum = 0;
+            while (i<=100){
+                sum+=i++;
+            }
+            System.out.println(sum);
+        }
+        /**
+         * 计算10的阶乘
+         */
+        @Test
+        public void testFn11(){
+            int i = 1;
+            int mul = 1;
+            while (i<10){
+                mul *=i++;
+            }
+            System.out.println(mul);
+        }
+
+        /**
+         * 逆序输出10-0
+         */
+        @Test
+        public void testFn12(){
+            int i = 10;
+        do{
+            System.out.println(i);
+            i--;
+        }while(i>=0);
+        }
     /**
-     * while循环
+     * java阶乘求和1！+2！+。。。+10！
      */
     @Test
-    public void testFn9(){
-    int i = 10;
-    while(i-->4){
-        System.out.println(i);
-    }
-    }
-    /**
-     * 计算1-100之间所有整数的和。。5050
-     */
-    @Test
-    public void testFn10(){
+    public void testFn13() {
         int i = 1;
         int sum = 0;
-        while (i<=100){
-            sum+=i++;
-        }
+        do {
+            int num = 1;
+            int j = 1;
+            do {
+                num *= j;
+                j++;
+            } while (j <= i);
+            sum += num;
+            i++;
+        } while (i <= 3);
         System.out.println(sum);
     }
     /**
-     * 计算10的阶乘
+     *for循环简单示例
      */
     @Test
-    public void testFn11(){
-        int i = 1;
-        int mul = 1;
-        while (i<10){
-            mul *=i++;
+    public void testFn14(){
+        for(int i = 0; i < 8 ; i++){
+            if(i==4)
+                continue;
+            System.out.println(i);
         }
-        System.out.println(mul);
+    }
+    /**
+     * 打印输出0~200之间能被7整除但不能被4整除的所有整数
+     */
+    @Test
+    public void testFn15(){
+    for(int i = 0;i<=200;i++){
+        if((i%7==0)&&(i%4!=0)){
+            System.out.print(i+"\t");
+        }
+    }
+    }
+    /**
+     * 输出十个斐波那契数列
+     */
+    @Test
+    public void testFn16(){
+        int i = 1; int j =1;
+        for(int n = 0;n < 5;n++){
+            System.out.print(i+" "+j+" ");
+            i+=j;
+            j+=i;
+        }
+    }
+    /**
+     * *
+     * **
+     * ***
+     * ****
+     * *****
+     */
+    @Test
+    public void testFn17(){
+        for(int i=1;i<=5;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    /**
+     * 九九乘法表
+     */
+    @Test
+    public void testFn18(){
+        for(int i = 1;i <=9;i++){
+            for(int j = 1;j<=i;j++){
+                System.out.print(j+"*"+i+"="+j*i+"\t");
+            }
+            System.out.println();
+        }
+    }
+    /**
+     *    *
+     *   **
+     *  ***
+     * ****
+     ******
+     */
+    @Test
+    public void testFn19(){
+        for(int i=1;i<=5;i++){
+            for(int j=5;j>=1;j--){
+                if(j<=i){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    /**
+     *    *
+     *   ***
+     *  *****
+     * *******
+     **********
+     */
+    @Test
+    public void testFn20(){
+        for(int i = 1; i <=5;i++){
+            for(int j=5;j>i;j--){
+                System.out.print(" ");
+            }
+            for(int k = 1;k<=2*i-1;k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    /**
+     *     A
+     *    BBB
+     *   CCCCC
+     *  DDDDDDD
+     * EEEEEEEEE
+     */
+    @Test
+    public void testFn21(){
+        char a = 'A';
+        for(int i = 1; i <=5;i++){
+            for(int j=5;j>i;j--){
+                System.out.print(" ");
+            }
+            for(int k = 1;k<=2*i-1;k++){
+                System.out.print(a);
+            }
+            a++;
+            System.out.println();
+        }
     }
 }
