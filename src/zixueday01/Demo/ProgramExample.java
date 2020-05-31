@@ -1,3 +1,5 @@
+package zixueday01.Demo;
+
 import org.junit.Test;
 
 import java.util.Scanner;
@@ -24,14 +26,14 @@ public class ProgramExample {
     *3,根据天数计算周数和剩余天数，天数通过键盘输入
      */
          @Test
-         public void testFn3(){
-         Scanner sc = new Scanner(System.in);
-         System.out.print("请输入天数d=");
-         int d = sc.nextInt();
-         int z = d/7;
-         int t = d%7;
-         System.out.print("周数为："+ z + ",天数为：" + t);
-     }
+        public void testFn3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("请输入天数d=");
+        int d = sc.nextInt();
+        int z = d/7;
+        int t = d%7;
+        System.out.print("周数为："+ z + ",天数为：" + t);
+    }
 
 
     public static void main(String[] args) {
@@ -334,3 +336,4 @@ public class ProgramExample {
         }
     }
 }
+
